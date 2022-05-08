@@ -88,9 +88,7 @@ const Login = () => {
           toast("Sent email");
         }}
       >
-
         Reset password
-        
       </button>
       <br />
       <input
