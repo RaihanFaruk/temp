@@ -1,0 +1,35 @@
+.counting-products{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    padding: 20px;
+    
+}
+.counting-products span{
+    font-weight: 600;
+    font-size: 30px;
+}
+.counting-text{
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    margin-right: 100px;
+    margin-left: 100px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+
+.title-sells{
+    font-weight: 700;
+    text-align: center;
+    margin-top: 140px;
+    margin-bottom: 100px;
+    color: #fff;
+    border-bottom: 3px solid #000;
+    height: 50px;
+    width: 300px;
+}

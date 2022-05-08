@@ -1,23 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import AddItem from "./Components/AddItems/AddItem";
+import Blog from "./Components/Blogs/Blog";
+import Footer from "./Components/Footer/Footer";
+import Home from "./Components/Home/Home";
+import Login from "./Components/Login/Login";
+import ManageItems from "./Components/ManageItems/ManageItems";
+import MyItem from "./Components/MyItem/MyItem";
+import Navbar from "./Components/Navbar/Navbar";
+import NotFound from "./Components/NotFound/NotFound";
+import ProductDetail from "./Components/ProductDetail/ProductDetail";
+import Products from "./Components/Products/Products";
+import RequreAuth from "./Components/RequreAuth/RequreAuth";
+import SignUp from "./Components/SignUp/SignUp";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blogs" element={<Blog />} />
+        <Route path="/products" element={<Products />} />
+        <Route
+          path="/products/:id"
+          element={
+            <RequreAuth>
+              <ProductDetail />
+            </RequreAuth>
+          }
+        />
+        <Route
+          path="/additem"
+          element={
+            <RequreAuth>
+              <AddItem/>
+            </RequreAuth>
+          }
+        />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="manageitems" element={<ManageItems />} />
+        <Route path="/myitem" element={<MyItem />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+
+      <Footer />
     </div>
   );
 }
