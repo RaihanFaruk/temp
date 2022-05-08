@@ -14,7 +14,9 @@ const Home = () => {
   const handleProducts = () => {
     navigate("/products");
   };
+  console.log(products,"name");
   return (
+    
     <div className="home">
       <Banner />
       <ServiceSlider />
