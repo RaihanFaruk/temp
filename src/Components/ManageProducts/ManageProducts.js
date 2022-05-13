@@ -11,7 +11,7 @@ const ManageProducts = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure ! you want to, delete this item?");
         if(proceed){
-            fetch(`http://localhost:5000/fruits/${id}`, {
+            fetch(`https://murmuring-beyond-23434.herokuapp.com/fruits/${id}`, {
                 method: "DELETE",
             })
             .then(res => res.json())
@@ -47,7 +47,7 @@ const ManageProducts = () => {
                   return(
                 <tr>
                 
-                <img className="table-img" src={product.image} alt="" />
+                <img className="table-img" src={product.img} alt="" />
                 <td className="t-head"> {product.name}</td>
                 <td>{product.price}</td>
                 <td>{product.quantity}</td>

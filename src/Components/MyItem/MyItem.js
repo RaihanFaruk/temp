@@ -10,7 +10,7 @@ const MyItem = () => {
     const [fruits, setFruits] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/fruits?email=${user?.email}`)
+        fetch(`https://murmuring-beyond-23434.herokuapp.com/fruits?email=${user?.email}`)
         .then(res => res.json())
         .then(data => setFruits(data));
     },[user]);

@@ -5,7 +5,7 @@ import "./ProductsCard.css";
 
 const ProductsCard = ({ product }) => {
   console.log(product);
-  const { _id, name, price, serviceProvider, image, shortDescription } = product;
+  const { _id, name, price, supplier, quantity, img, description } = product;
   const navigate = useNavigate();
   const handleProductClick = (id) => {
     navigate(`/products/${id}`);
@@ -20,15 +20,16 @@ const ProductsCard = ({ product }) => {
       
       <Card style={{ width: "18rem" }} id="card">
         <Card.Body>
-          <img className="card-images" src={image} alt={image} />
+          <img className="card-images" src={img} alt={img} />
           <div className="card-text">
             <div className="">
-              <span className="text-danger "> ৳: </span>
-              {price}
+              
               <h3>{name}</h3>
+              <span className="text-danger "> Price: {price} </span>
             </div>
-            <p className="supplier">Supplier: {serviceProvider}</p>
-            <p> {shortDescription}</p>
+            <p className="quantity">Quantity: {quantity}</p>
+            <p className="supplier">Supplier: {supplier}</p>
+            <p> {description}</p>
           </div>
           <button
             onClick={() => handleProductClick(_id)}

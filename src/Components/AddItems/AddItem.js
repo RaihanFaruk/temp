@@ -22,7 +22,7 @@ const AddItem = () => {
     e.target.reset()
     
     const { data } = await axios
-      .post("http://localhost:5000/fruits", product)
+      .post("https://murmuring-beyond-23434.herokuapp.com/fruits", product)
       console.log(data);  
   };
   const { register  } = useForm();
