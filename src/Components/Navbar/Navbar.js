@@ -17,10 +17,8 @@ const Navbar = () => {
       <div className="d-flex navbar-container  " sticky="top">
         <div className=" nav-name nav-logo mt-3">
           <a>
-
             <h2> 
-              <img className="hoop" src={logo} alt="" />
-              
+              <img className="hoop" src={logo} alt="" />      
             </h2>
           </a>
         </div>
